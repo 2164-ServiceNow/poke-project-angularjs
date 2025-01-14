@@ -1,0 +1,13 @@
+<div ng-if="pokemons.results && pokemons.results.length > 1">
+    <button ng-click="previous()" ng-if="pokemons.previous">Previous Page</button>
+    <button ng-click="next()" ng-if="pokemons.next">Next Page</button>
+    <ul>
+        <li ng-repeat="pokemon in pokemons.results">
+            {{pokemon}}
+        </li>
+    </ul>
+</div>
+
+<div ng-if="pokemons.results === undefined">
+    <p>{{pokemons}}</p>    
+</div>

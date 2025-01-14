@@ -3,8 +3,9 @@
 // Declare app level module which depends on views, and core components
 angular.module('pokeApp', [
   'ngRoute',
-  'pokemon',
-  'searchBar'
+  'pokemonPage',
+  'searchBar',
+  'pokemon'
 ])
 .config(function($locationProvider, $routeProvider) {
   $routeProvider
@@ -12,7 +13,7 @@ angular.module('pokeApp', [
     templateUrl: "pages/main.html"
   })
   .when("/pokemon",{
-    templateUrl: "pages/pokemonPage/pokemon.html",
+    templateUrl: "pages/pokemonPage/pokemonPage.html",
     controller : "PokemonCtrl"
   })
   

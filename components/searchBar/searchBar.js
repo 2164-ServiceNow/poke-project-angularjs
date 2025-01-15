@@ -1,6 +1,6 @@
 angular.module('searchBar', [])
 
-.component('searchbar',{
+.component('searchbar',{ // components named CANNOT include '-' or '.'
     templateUrl: 'components/searchBar/searchBar.html',
     controller: function SearchBarCtrl($scope, searchBarService){
         $scope.searchValue = ""

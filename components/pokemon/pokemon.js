@@ -29,7 +29,7 @@ angular.module('pokemon', [])
 
         $scope.previous = function () {
             // $http.get(`https://pokeapi.co/api/v2/pokemon/?offset=${80}&limit=${20}`)
-            $http.get(`${$scope.pokemons.next}`)
+            $http.get(`${$scope.pokemons.previous}`) // SHAME THE TRAINER HE FORGOT TO UPDATE THIS TO PREVIOUS
             .then((response) => {
                 $scope.pokemons = response.data;
                 console.log($scope.pokemons)

@@ -1,0 +1,9 @@
+<label>Filter: <input ng-model="filterItems"/></label>
+
+<ul>
+    <li ng-repeat="item in items | filter:filterItems" ng-click="selectItem(item)">
+        {{item.name}}
+        <!-- because I named my component with camelCase I neeed to label my element with kebab-case -->
+        <item-details item="selectedItem"></item-details>
+    </li>
+</ul>

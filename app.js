@@ -6,9 +6,10 @@ angular.module('pokeApp', [
   'searchBar',
   'pokemon',
   'items',
-  'itemDetails'
+  'itemDetails',
+  'moves'
 ])
-.config(function($locationProvider, $routeProvider) {
+.config(function($routeProvider) {
   $routeProvider
   .when("/", {
     templateUrl: "pages/main.html"
@@ -19,9 +20,8 @@ angular.module('pokeApp', [
   .when("/items", {
     templateUrl: "pages/itemsPage.html"
   })
-  
-  $locationProvider.html5Mode({
-    enabled:true,
-    requireBase:false
-  });
-})
+  .when("/moves", {
+    templateUrl: "pages/movesPage.html"
+  })
+}
+)

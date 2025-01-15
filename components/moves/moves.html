@@ -1,0 +1,10 @@
+<h1>Moves: </h1>
+<ul>
+    <li ng-repeat="move in moves">
+        {{move}}
+    </li>
+</ul>
+
+<p ng-if="queryMove.results === undefined"> 
+    Name: {{queryMove.name}} ; Accuracy: {{queryMove.accuracy}}; PP: {{queryMove.pp}} ; Power: {{queryMove.power}}
+</p>

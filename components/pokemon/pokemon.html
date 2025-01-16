@@ -1,0 +1,16 @@
+<div ng-if="pokemons.results && pokemons.results.length > 1">
+    <button ng-click="previous()" ng-if="pokemons.previous">Previous Page</button>
+    <button ng-click="next()" ng-if="pokemons.next">Next Page</button>
+    <ul>
+        <li ng-repeat="pokemon in pokemons.results">
+            {{pokemon}}
+        </li>
+    </ul>
+</div>
+
+<!-- ng-show will show element when true, hide when false. ng-hide will hide when true, show when false. You place a conditional value inside -->
+ <!-- with ng-show & ng-hide, this is generally used alongside truthy-falsey values -->
+<!-- <div ng-show="!pokemons.results"> -->
+<div ng-hide="pokemons.results">
+    <p>{{pokemons}}</p>    
+</div>

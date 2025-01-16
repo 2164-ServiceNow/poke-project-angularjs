@@ -1,0 +1,17 @@
+<h1>Moves: </h1>
+<ul>
+    <li ng-repeat="move in moves">
+        {{move}}
+    </li>
+</ul>
+
+<!-- weight variable is empty because we included the let keyword with ng-init in the p below -->
+<!-- <h3>Weight: {{weight}}</h3>  -->
+
+<!-- can use let with ng-init to prevent hoisting -->
+<!-- <p ng-hide="queryMove.results" ng-init="weight = 0.75">  -->
+<p ng-hide="queryMove.results" ng-init="let weight = 0.75"> 
+    Name: {{queryMove.name}} ; Accuracy: {{queryMove.accuracy * weight}}; PP: {{queryMove.pp * 0.75}} ; Power: {{queryMove.power * 0.75}}
+</p>
+
+<h3>Weight: {{weight}}</h3> 

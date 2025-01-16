@@ -8,6 +8,9 @@
     </ul>
 </div>
 
-<div ng-if="pokemons.results === undefined">
+<!-- ng-show will show element when true, hide when false. ng-hide will hide when true, show when false. You place a conditional value inside -->
+ <!-- with ng-show & ng-hide, this is generally used alongside truthy-falsey values -->
+<!-- <div ng-show="!pokemons.results"> -->
+<div ng-hide="pokemons.results">
     <p>{{pokemons}}</p>    
 </div>
